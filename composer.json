@@ -16,6 +16,10 @@
         {
             "name": "Titouan BENOIT",
             "email": "titouan@welp.today"
+        },
+        {
+            "name": "DX-Solutions",
+            "email": "support@dx-solutions.be"
         }
     ],
     "autoload": {
