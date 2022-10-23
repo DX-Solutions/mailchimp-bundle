@@ -8,6 +8,8 @@
 
 This bundle will help you synchronise your project's newsletter subscribers into MailChimp throught MailChimp API V3.
 
+It is a fork of the [Welp Mailchimp Bundle](https://github.com/welpdev/mailchimp-bundle) and has been adapted mostly for internal use and updated PHP/Symfony versions.
+
 ## Features
 
 * [x] Use your own userProvider (basic `FosSubscriberProvider` included to interface with FosUserBundle)
@@ -42,6 +44,11 @@ In your `config.yml`:
 ```yaml
 welp_mailchimp:
     api_key: YOURMAILCHIMPAPIKEY
+    lists:
+        '%env(MAILCHIMP_LIST_ID)%':
+            subscriber_provider: 'YOUR_SUBSCRIPTION_PROVIDER'
+            webhook_secret: 'YOUR_MAILCHIMP_WEBHOOK_SECRET'
+            webhook_url: ~
 ```
 
 More configuration on the [documentation](https://welpdev.github.io/mailchimp-bundle/configuration/).
